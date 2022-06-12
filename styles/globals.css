@@ -1,16 +1,35 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root,
+:root.light {
+  --bg-color: #fff;
+  --text-color: rgb(17, 24, 39);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root.dark {
+  --bg-color: rgb(17, 24, 39);
+  --text-color: #fff;
 }
 
 * {
   box-sizing: border-box;
 }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Clash Display', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
